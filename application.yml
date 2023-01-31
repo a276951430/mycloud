@@ -1,0 +1,21 @@
+spring:
+  profiles:
+    active:
+    - dev
+---
+spring:
+  config:
+    activate:
+      on-profile:
+      - dev
+  application:
+    name: mldnconfig-test-dev
+---
+spring:
+  config:
+    activate:
+      on-profile:
+      - product
+  application:
+    name: mldnconfig-test-product
+    
