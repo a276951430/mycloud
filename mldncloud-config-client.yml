@@ -1,0 +1,32 @@
+spring:
+  profiles:
+    active:
+    - dev
+---
+spring:
+  config:
+    activate:
+      on-profile:
+      - dev
+  application:
+    name: mldncloud-config-client
+server:
+  port: 8101
+  eureka:
+  client:
+    service-url:
+      defaultZone: http://username:hello@eureka-7001.com:7001/eureka
+---
+spring:
+  config:
+    activate:
+      on-profile:
+      - product
+  application:
+    name: mldncloud-config-client
+server:
+  port: 8102
+eureka:
+  client:
+    service-url:
+      defaultZone: http://username:hello@eureka-7001.com:7001/eureka
